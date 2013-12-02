@@ -1,0 +1,21 @@
+readnfccc
+---------
+
+* Introduction:
+"Quick and dirty" proof-of-concept
+Open source tool developped and showed for Hackito Ergo Sum 2012 - "Hacking the NFC credit cards for fun and debit ;)"
+Reads NFC credit card personal data (gender, first name, last name, PAN, expiration date, transaction history...) 
+
+* Requirements:
+libnfc (>= 1.4.2) and a suitable NFC reader (http://www.libnfc.org/documentation/hardware/compatibility)
+
+* Compilation: 
+$ gcc readnfccc.c -lnfc -o readnfccc
+
+* Known bugs and limitations:
+- Supports only Visa & MasterCard "CB" credit cards (AID = A0 00 00 00 42 10 10)
+- No support for currency and country in history (always shows € and doesn't display country)
+- Needs code cleaning
+
+* License: distributed under GPL version 3 (http://www.gnu.org/licenses/gpl.html)
+
